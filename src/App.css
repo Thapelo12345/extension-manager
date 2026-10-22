@@ -1,0 +1,36 @@
+@import url('https://googleapis.com');
+@import "tailwindcss";
+
+:root {
+  --bg-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --bar-background: hsl(200, 60%, 99%);
+  --bar-shadow: hsl(217, 61%, 90%);
+  --theme-btn: hsl(0,0%,93%);
+  --cell-border: hsl(0,0%,93%);
+  --forground: hsl(200, 60%, 99%);
+  --text-color: black;
+  --active-text: hsl(200, 60%, 99%);
+  --main-red: #c62b1b;
+}
+
+/* Dark Theme Override */
+[data-theme="dark"] {
+--bg-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+--bar-background: hsl(225, 23%, 24%);
+--bar-shadow: black;
+--theme-btn: hsl(225, 23%, 24%);
+--cell-border: hsl(225, 23%, 24%);
+--forground: hsl(226, 25%, 17%);
+--active-text: black;
+--text-color: hsl(200, 60%, 99%);
+--main-red: hsl(3, 86%, 64%);
+}
+body {
+  background-image: var(--bg-image);
+  font-family: 'Noto Sans', sans-serif;
+
+}
+
+.top-btn {
+  @apply border border-[var(--cell-border)] focus:border-[var(--main-red)] p-1 px-4 text-sm rounded-2xl m-2 cursor-pointer;
+}
